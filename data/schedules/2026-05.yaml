@@ -1,0 +1,384 @@
+month: 2026-05
+generatedAt: 2026-04-19T02:43:32.676Z
+weekOverrides: {}
+assignments:
+  - id: asg-2026-05-02-gms-central-park-shift-aog
+    date: 2026-05-02
+    churchId: gms-central-park
+    shiftId: shift-aog
+    serviceIds:
+      - aog-teen
+      - aog-youth
+    volunteerIds:
+      - dason
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-03-gms-central-park-shift-u1-u4
+    date: 2026-05-03
+    churchId: gms-central-park
+    shiftId: shift-u1-u4
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+      - umum-4
+    volunteerIds:
+      - giat
+    hoursCounted: 8
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-03-gms-karawaci-shift-u1-u2
+    date: 2026-05-03
+    churchId: gms-karawaci
+    shiftId: shift-u1-u2
+    serviceIds:
+      - umum-1
+      - umum-2
+    volunteerIds:
+      - hendy
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-03-gms-gandaria-shift-u1-u3
+    date: 2026-05-03
+    churchId: gms-gandaria
+    shiftId: shift-u1-u3
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+    volunteerIds:
+      - ishak
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-03-gms-karawaci-shift-u3-aog
+    date: 2026-05-03
+    churchId: gms-karawaci
+    shiftId: shift-u3-aog
+    serviceIds:
+      - umum-3
+      - aog
+    volunteerIds:
+      - jannis
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-03-gms-central-park-shift-u5-u7
+    date: 2026-05-03
+    churchId: gms-central-park
+    shiftId: shift-u5-u7
+    serviceIds:
+      - umum-5
+      - umum-6
+      - umum-7
+    volunteerIds:
+      - yosia-c
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-09-gms-central-park-shift-aog
+    date: 2026-05-09
+    churchId: gms-central-park
+    shiftId: shift-aog
+    serviceIds:
+      - aog-teen
+      - aog-youth
+    volunteerIds:
+      - feery
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-10-gms-central-park-shift-u1-u4
+    date: 2026-05-10
+    churchId: gms-central-park
+    shiftId: shift-u1-u4
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+      - umum-4
+    volunteerIds:
+      - willem
+    hoursCounted: 8
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-10-gms-karawaci-shift-u1-u2
+    date: 2026-05-10
+    churchId: gms-karawaci
+    shiftId: shift-u1-u2
+    serviceIds:
+      - umum-1
+      - umum-2
+    volunteerIds:
+      - ishak
+    hoursCounted: 3
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-10-gms-gandaria-shift-u1-u3
+    date: 2026-05-10
+    churchId: gms-gandaria
+    shiftId: shift-u1-u3
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+    volunteerIds:
+      - hanif
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-10-gms-karawaci-shift-u3-aog
+    date: 2026-05-10
+    churchId: gms-karawaci
+    shiftId: shift-u3-aog
+    serviceIds:
+      - umum-3
+      - aog
+    volunteerIds:
+      - calvin
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-10-gms-central-park-shift-u5-u7
+    date: 2026-05-10
+    churchId: gms-central-park
+    shiftId: shift-u5-u7
+    serviceIds:
+      - umum-5
+      - umum-6
+      - umum-7
+    volunteerIds:
+      - gilbert
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-16-gms-central-park-shift-aog
+    date: 2026-05-16
+    churchId: gms-central-park
+    shiftId: shift-aog
+    serviceIds:
+      - aog-teen
+      - aog-youth
+    volunteerIds:
+      - dora
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-17-gms-central-park-shift-u1-u4
+    date: 2026-05-17
+    churchId: gms-central-park
+    shiftId: shift-u1-u4
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+      - umum-4
+    volunteerIds:
+      - dave-e
+    hoursCounted: 8
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-17-gms-karawaci-shift-u1-u2
+    date: 2026-05-17
+    churchId: gms-karawaci
+    shiftId: shift-u1-u2
+    serviceIds:
+      - umum-1
+      - umum-2
+    volunteerIds:
+      - yosia-c
+    hoursCounted: 3
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-17-gms-gandaria-shift-u1-u3
+    date: 2026-05-17
+    churchId: gms-gandaria
+    shiftId: shift-u1-u3
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+    volunteerIds:
+      - saut
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-17-gms-karawaci-shift-u3-aog
+    date: 2026-05-17
+    churchId: gms-karawaci
+    shiftId: shift-u3-aog
+    serviceIds:
+      - umum-3
+      - aog
+    volunteerIds:
+      - yance
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-17-gms-central-park-shift-u5-u7
+    date: 2026-05-17
+    churchId: gms-central-park
+    shiftId: shift-u5-u7
+    serviceIds:
+      - umum-5
+      - umum-6
+      - umum-7
+    volunteerIds:
+      - jonathan
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-23-gms-central-park-shift-aog
+    date: 2026-05-23
+    churchId: gms-central-park
+    shiftId: shift-aog
+    serviceIds:
+      - aog-teen
+      - aog-youth
+    volunteerIds:
+      - gusrano
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-24-gms-central-park-shift-u1-u4
+    date: 2026-05-24
+    churchId: gms-central-park
+    shiftId: shift-u1-u4
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+      - umum-4
+    volunteerIds:
+      - joanda
+    hoursCounted: 8
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-24-gms-karawaci-shift-u1-u2
+    date: 2026-05-24
+    churchId: gms-karawaci
+    shiftId: shift-u1-u2
+    serviceIds:
+      - umum-1
+      - umum-2
+    volunteerIds:
+      - saut
+    hoursCounted: 3
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-24-gms-gandaria-shift-u1-u3
+    date: 2026-05-24
+    churchId: gms-gandaria
+    shiftId: shift-u1-u3
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+    volunteerIds:
+      - christian
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-24-gms-karawaci-shift-u3-aog
+    date: 2026-05-24
+    churchId: gms-karawaci
+    shiftId: shift-u3-aog
+    serviceIds:
+      - umum-3
+      - aog
+    volunteerIds:
+      - jannis
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-24-gms-central-park-shift-u5-u7
+    date: 2026-05-24
+    churchId: gms-central-park
+    shiftId: shift-u5-u7
+    serviceIds:
+      - umum-5
+      - umum-6
+      - umum-7
+    volunteerIds:
+      - feery
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-30-gms-central-park-shift-aog
+    date: 2026-05-30
+    churchId: gms-central-park
+    shiftId: shift-aog
+    serviceIds:
+      - aog-teen
+      - aog-youth
+    volunteerIds:
+      - dason
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-31-gms-central-park-shift-u1-u4
+    date: 2026-05-31
+    churchId: gms-central-park
+    shiftId: shift-u1-u4
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+      - umum-4
+    volunteerIds:
+      - hendy
+    hoursCounted: 8
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-31-gms-karawaci-shift-u1-u2
+    date: 2026-05-31
+    churchId: gms-karawaci
+    shiftId: shift-u1-u2
+    serviceIds:
+      - umum-1
+      - umum-2
+    volunteerIds:
+      - jonathan
+    hoursCounted: 3
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-31-gms-gandaria-shift-u1-u3
+    date: 2026-05-31
+    churchId: gms-gandaria
+    shiftId: shift-u1-u3
+    serviceIds:
+      - umum-1
+      - umum-2
+      - umum-3
+    volunteerIds:
+      - dora
+    hoursCounted: 6
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-31-gms-karawaci-shift-u3-aog
+    date: 2026-05-31
+    churchId: gms-karawaci
+    shiftId: shift-u3-aog
+    serviceIds:
+      - umum-3
+      - aog
+    volunteerIds:
+      - gusrano
+    hoursCounted: 4
+    confirmed: false
+    notes: ""
+  - id: asg-2026-05-31-gms-central-park-shift-u5-u7
+    date: 2026-05-31
+    churchId: gms-central-park
+    shiftId: shift-u5-u7
+    serviceIds:
+      - umum-5
+      - umum-6
+      - umum-7
+    volunteerIds:
+      - yance
+    hoursCounted: 6
+    confirmed: false
+    notes: ""

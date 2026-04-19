@@ -1,0 +1,246 @@
+- id: calvin
+  name: Calvin
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+    - gms-central-park
+    - gms-gandaria
+  weeklyUnavailability: []
+- id: christian
+  name: Christian
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: dason
+  name: Dason
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: dave-e
+  name: Dave E
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: dora
+  name: Dora
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: feery
+  name: Feery
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: giat
+  name: Giat
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: gilbert
+  name: Gilbert
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: gusrano
+  name: Gusrano
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: hanif
+  name: Hanif
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: hendy
+  name: Hendy
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: ishak
+  name: Ishak
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: jannis
+  name: Jannis
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: joanda
+  name: Joanda
+  active: true
+  homeChurchId: gms-bsd
+  assignableChurchIds:
+    - gms-alam-sutera
+    - gms-puri
+    - gms-bsd
+    - gms-central-park
+    - gms-gandaria
+  weeklyUnavailability:
+    - dayOfWeek: sat
+- id: jonathan
+  name: Jonathan
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: saut
+  name: Saut
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: willem
+  name: Willem
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: yance
+  name: Yance
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []
+- id: yosia-c
+  name: Yosia C
+  active: true
+  homeChurchId: null
+  assignableChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  weeklyUnavailability: []

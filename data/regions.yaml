@@ -1,0 +1,5 @@
+# Regions — broad groupings of local churches. Hand-edited.
+# Schema: src/lib/schemas.ts → RegionsFile
+
+- id: jakarta
+  name: Jakarta / Jabodetabek

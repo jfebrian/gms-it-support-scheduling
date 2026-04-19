@@ -1,0 +1,691 @@
+- id: gms-central-park
+  name: GMS Central Park
+  livestream: true
+  youtubeChannelId: gms-jakarta-jabar-banten
+  color: "#2272c3"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 07:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 09:00
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 11:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: umum-4
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service IV (Umum 4)
+      requiresItSupport: true
+    - id: umum-5
+      dayOfWeek: sun
+      startTime: 15:00
+      name: Family Service V (Umum 5)
+      requiresItSupport: true
+    - id: umum-6
+      dayOfWeek: sun
+      startTime: 17:00
+      name: Family Service VI (Umum 6)
+      requiresItSupport: true
+    - id: umum-7
+      dayOfWeek: sun
+      startTime: 19:00
+      name: Family Service VII (Umum 7)
+      requiresItSupport: true
+    - id: aog-teen
+      dayOfWeek: sat
+      startTime: 16:00
+      name: AOG Teen
+      requiresItSupport: true
+    - id: aog-youth
+      dayOfWeek: sat
+      startTime: 18:00
+      name: AOG Youth
+      requiresItSupport: true
+    - id: ek-voltage
+      dayOfWeek: sat
+      startTime: 13:00
+      name: EK Voltage (Kelas 4-7)
+      requiresItSupport: false
+    - id: ek-little-eagle-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-little-eagle-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-allstars-0700
+      dayOfWeek: sun
+      startTime: 07:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1500
+      dayOfWeek: sun
+      startTime: 15:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1700
+      dayOfWeek: sun
+      startTime: 17:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1900
+      dayOfWeek: sun
+      startTime: 19:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-english-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK English (TK-3 SD)
+      requiresItSupport: false
+    - id: ek-super-trooper-0700
+      dayOfWeek: sun
+      startTime: 07:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1500
+      dayOfWeek: sun
+      startTime: 15:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1700
+      dayOfWeek: sun
+      startTime: 17:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1900
+      dayOfWeek: sun
+      startTime: 19:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+  weeklyShifts:
+    - id: shift-aog
+      label: AOG (Teen + Youth)
+      serviceIds:
+        - aog-teen
+        - aog-youth
+      requiredVolunteers: 1
+      weeks: []
+    - id: shift-u1-u4
+      label: Umum 1-4
+      serviceIds:
+        - umum-1
+        - umum-2
+        - umum-3
+        - umum-4
+      requiredVolunteers: 1
+      weeks: []
+    - id: shift-u5-u7
+      label: Umum 5-7
+      serviceIds:
+        - umum-5
+        - umum-6
+        - umum-7
+      requiredVolunteers: 1
+      weeks: []
+- id: gms-gandaria
+  name: GMS Gandaria City
+  livestream: true
+  youtubeChannelId: gms-jakarta-jabar-banten
+  color: "#2b966f"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 10:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 16:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: aog
+      dayOfWeek: sat
+      startTime: 16:00
+      name: AOG Teen & Youth
+      requiresItSupport: true
+    - id: ek-little-eagle-1000
+      dayOfWeek: sun
+      startTime: 10:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-allstars-1000
+      dayOfWeek: sun
+      startTime: 10:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1600
+      dayOfWeek: sun
+      startTime: 16:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-super-trooper-1000
+      dayOfWeek: sun
+      startTime: 10:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1600
+      dayOfWeek: sun
+      startTime: 16:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-voltage-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Voltage (Kelas 4-7)
+      requiresItSupport: false
+  weeklyShifts:
+    - id: shift-u1-u3
+      label: Umum 1-3
+      serviceIds:
+        - umum-1
+        - umum-2
+        - umum-3
+      requiredVolunteers: 1
+      weeks: []
+- id: gms-karawaci
+  name: GMS Karawaci
+  livestream: false
+  youtubeChannelId: null
+  color: "#e56419"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 09:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 11:00
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: aog
+      dayOfWeek: sun
+      startTime: 15:00
+      name: AOG Teen & Youth
+      requiresItSupport: true
+    - id: ek-allstars-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-super-trooper-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+  weeklyShifts:
+    - id: shift-u1-u2
+      label: Umum 1-2
+      serviceIds:
+        - umum-1
+        - umum-2
+      requiredVolunteers: 1
+      weeks:
+        - 1
+    - id: shift-u3-aog
+      label: Umum 3 + AOG
+      serviceIds:
+        - umum-3
+        - aog
+      requiredVolunteers: 1
+      weeks: []
+- id: gms-alam-sutera
+  name: GMS Alam Sutera
+  livestream: false
+  youtubeChannelId: null
+  color: "#8c37bd"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 07:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 09:00
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 11:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: umum-4
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service IV (Umum 4)
+      requiresItSupport: true
+    - id: umum-5
+      dayOfWeek: sun
+      startTime: 15:00
+      name: Family Service V (Umum 5)
+      requiresItSupport: true
+    - id: umum-6
+      dayOfWeek: sun
+      startTime: 17:00
+      name: Family Service VI (Umum 6)
+      requiresItSupport: true
+    - id: umum-7
+      dayOfWeek: sun
+      startTime: 19:00
+      name: Family Service VII (Umum 7)
+      requiresItSupport: true
+    - id: aog-teen
+      dayOfWeek: sat
+      startTime: 16:00
+      name: AOG Teen
+      requiresItSupport: true
+    - id: aog-youth
+      dayOfWeek: sat
+      startTime: 18:00
+      name: AOG Youth
+      requiresItSupport: true
+    - id: ek-voltage
+      dayOfWeek: sat
+      startTime: 13:00
+      name: EK Voltage (Kelas 4-7)
+      requiresItSupport: false
+    - id: ek-little-eagle-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-little-eagle-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-allstars-0700
+      dayOfWeek: sun
+      startTime: 07:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1500
+      dayOfWeek: sun
+      startTime: 15:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1700
+      dayOfWeek: sun
+      startTime: 17:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1900
+      dayOfWeek: sun
+      startTime: 19:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-super-trooper-0700
+      dayOfWeek: sun
+      startTime: 07:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1500
+      dayOfWeek: sun
+      startTime: 15:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1700
+      dayOfWeek: sun
+      startTime: 17:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1900
+      dayOfWeek: sun
+      startTime: 19:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+  weeklyShifts: []
+- id: gms-puri
+  name: GMS Puri
+  livestream: false
+  youtubeChannelId: null
+  color: "#d4356a"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 09:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 11:00
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: umum-4
+      dayOfWeek: sun
+      startTime: 15:00
+      name: Family Service IV (Umum 4)
+      requiresItSupport: true
+    - id: umum-5
+      dayOfWeek: sun
+      startTime: 17:00
+      name: Family Service V (Umum 5)
+      requiresItSupport: true
+    - id: aog
+      dayOfWeek: sat
+      startTime: 16:00
+      name: AOG Teen & Youth
+      requiresItSupport: true
+    - id: ek-voltage
+      dayOfWeek: sat
+      startTime: 13:00
+      name: EK Voltage (Kelas 4-7)
+      requiresItSupport: false
+    - id: ek-little-eagle-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-allstars-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1500
+      dayOfWeek: sun
+      startTime: 15:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1700
+      dayOfWeek: sun
+      startTime: 17:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-super-trooper-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1500
+      dayOfWeek: sun
+      startTime: 15:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1700
+      dayOfWeek: sun
+      startTime: 17:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+  weeklyShifts: []
+- id: gms-pluit
+  name: GMS Pluit
+  livestream: false
+  youtubeChannelId: null
+  color: "#cea016"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 08:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 10:30
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: umum-4
+      dayOfWeek: sun
+      startTime: 15:30
+      name: Family Service IV (Umum 4)
+      requiresItSupport: true
+    - id: aog
+      dayOfWeek: sat
+      startTime: 16:00
+      name: AOG Teen & Youth
+      requiresItSupport: true
+    - id: ek-little-eagle-1030
+      dayOfWeek: sun
+      startTime: 10:30
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-allstars-0800
+      dayOfWeek: sun
+      startTime: 08:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1030
+      dayOfWeek: sun
+      startTime: 10:30
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1530
+      dayOfWeek: sun
+      startTime: 15:30
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-super-trooper-0800
+      dayOfWeek: sun
+      startTime: 08:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1030
+      dayOfWeek: sun
+      startTime: 10:30
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1530
+      dayOfWeek: sun
+      startTime: 15:30
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-voltage-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Voltage (Kelas 4-7)
+      requiresItSupport: false
+  weeklyShifts: []
+- id: gms-bsd
+  name: GMS BSD
+  livestream: false
+  youtubeChannelId: null
+  color: "#258db0"
+  weeklyServices:
+    - id: umum-1
+      dayOfWeek: sun
+      startTime: 09:00
+      name: Family Service I (Umum 1)
+      requiresItSupport: true
+    - id: umum-2
+      dayOfWeek: sun
+      startTime: 11:00
+      name: Family Service II (Umum 2)
+      requiresItSupport: true
+    - id: umum-3
+      dayOfWeek: sun
+      startTime: 13:00
+      name: Family Service III (Umum 3)
+      requiresItSupport: true
+    - id: ek-little-eagle-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-little-eagle-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Little Eagle (1-3 thn)
+      requiresItSupport: false
+    - id: ek-allstars-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-allstars-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Allstars (PG-TK)
+      requiresItSupport: false
+    - id: ek-super-trooper-0900
+      dayOfWeek: sun
+      startTime: 09:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1100
+      dayOfWeek: sun
+      startTime: 11:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+    - id: ek-super-trooper-1300
+      dayOfWeek: sun
+      startTime: 13:00
+      name: EK Super Trooper (Kelas 1-3)
+      requiresItSupport: false
+  weeklyShifts: []

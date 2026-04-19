@@ -1,0 +1,218 @@
+id: 2026-04-03-jumat-agung
+name: Ibadah Jumat Agung 2026
+date: 2026-04-03
+churches:
+  - churchId: gms-central-park
+    services: []
+    shifts:
+      - id: shift-u1-u4
+        label: Umum 1-4
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - umum-4
+        requiredVolunteers: 1
+      - id: shift-u5-u7
+        label: Umum 5-7
+        serviceIds:
+          - umum-5
+          - umum-6
+          - umum-7
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-central-park-shift-u1-u4
+        shiftId: shift-u1-u4
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - umum-4
+        volunteerIds:
+          - christian
+        hoursCounted: 6
+        confirmed: true
+        notes: ""
+      - id: asg-2026-04-03-jumat-agung-gms-central-park-shift-u5-u7
+        shiftId: shift-u5-u7
+        serviceIds:
+          - umum-5
+          - umum-6
+          - umum-7
+        volunteerIds:
+          - gilbert
+        hoursCounted: 4.5
+        confirmed: true
+        notes: ""
+  - churchId: gms-gandaria
+    services: []
+    shifts:
+      - id: shift-u1-u3
+        label: Umum 1-3
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-gandaria-shift-u1-u3
+        shiftId: shift-u1-u3
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+        volunteerIds:
+          - dave-e
+        hoursCounted: 4.5
+        confirmed: true
+        notes: ""
+  - churchId: gms-karawaci
+    services: []
+    shifts:
+      - id: shift-all
+        label: All services + teardown
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - aog
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-karawaci-shift-all
+        shiftId: shift-all
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - aog
+        volunteerIds:
+          - feery
+        hoursCounted: 6
+        confirmed: true
+        notes: ""
+  - churchId: gms-alam-sutera
+    services: []
+    shifts:
+      - id: shift-u1-u4
+        label: Umum 1-4
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - umum-4
+        requiredVolunteers: 1
+      - id: shift-u5-u7
+        label: Umum 5-7
+        serviceIds:
+          - umum-5
+          - umum-6
+          - umum-7
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-alam-sutera-shift-u1-u4
+        shiftId: shift-u1-u4
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - umum-4
+        volunteerIds:
+          - calvin
+        hoursCounted: 6
+        confirmed: true
+        notes: ""
+      - id: asg-2026-04-03-jumat-agung-gms-alam-sutera-shift-u5-u7
+        shiftId: shift-u5-u7
+        serviceIds:
+          - umum-5
+          - umum-6
+          - umum-7
+        volunteerIds:
+          - hanif
+        hoursCounted: 4.5
+        confirmed: true
+        notes: ""
+  - churchId: gms-puri
+    services: []
+    shifts:
+      - id: shift-u1-u3
+        label: Umum 1-3
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+        requiredVolunteers: 1
+      - id: shift-u4-u5
+        label: Umum 4-5
+        serviceIds:
+          - umum-4
+          - umum-5
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-puri-shift-u1-u3
+        shiftId: shift-u1-u3
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+        volunteerIds:
+          - saut
+        hoursCounted: 4.5
+        confirmed: true
+        notes: ""
+      - id: asg-2026-04-03-jumat-agung-gms-puri-shift-u4-u5
+        shiftId: shift-u4-u5
+        serviceIds:
+          - umum-4
+          - umum-5
+        volunteerIds:
+          - jonathan
+        hoursCounted: 3
+        confirmed: true
+        notes: ""
+  - churchId: gms-pluit
+    services: []
+    shifts:
+      - id: shift-u1-u4
+        label: Umum 1-4
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - umum-4
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-pluit-shift-u1-u4
+        shiftId: shift-u1-u4
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+          - umum-4
+        volunteerIds:
+          - ishak
+        hoursCounted: 6
+        confirmed: true
+        notes: ""
+  - churchId: gms-bsd
+    services: []
+    shifts:
+      - id: shift-u1-u3
+        label: Umum 1-3
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+        requiredVolunteers: 1
+    assignments:
+      - id: asg-2026-04-03-jumat-agung-gms-bsd-shift-u1-u3
+        shiftId: shift-u1-u3
+        serviceIds:
+          - umum-1
+          - umum-2
+          - umum-3
+        volunteerIds:
+          - yance
+        hoursCounted: 4.5
+        confirmed: true
+        notes: ""

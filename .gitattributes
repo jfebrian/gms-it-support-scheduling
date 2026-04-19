@@ -1,0 +1,19 @@
+# Normalize line endings — critical for cross-platform (macOS/Windows/Linux) work
+* text=auto eol=lf
+
+# Explicit rules for our data and code files
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.ts text eol=lf
+*.svelte text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+
+# Binary / should not be line-converted
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text eol=lf

@@ -1,0 +1,10 @@
+# App-level configuration. Hand-edited.
+# Schema: src/lib/schemas.ts → Settings
+# Every field has a default; override only what differs from that default.
+
+timezone: Asia/Jakarta
+i18n:
+  defaultLocale: id
+  supportedLocales:
+    - id
+    - en

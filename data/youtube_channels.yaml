@@ -1,0 +1,24 @@
+# YouTube channels — one regional channel shared across all Jakarta / Jawa
+# Barat / Banten local churches. Hand-edited.
+# Schema: src/lib/schemas.ts → YouTubeChannelsFile
+#
+# Only Central Park and Gandaria produce an independent weekly livestream,
+# but they both publish to the same regional channel. Smaller branches also
+# display this channel's stream during multi-church events.
+#
+# NOTE: the `youtubeChannelId` value below is the channel handle; replace
+# with the UC-style ID before enabling the livestream-monitoring loop.
+
+- id: gms-jakarta-jabar-banten
+  name: GMS Jakarta, Jawa Barat, Banten
+  youtubeChannelId: "@GMSJakartaJawaBaratBanten"
+  regionId: jakarta
+  servesChurchIds:
+    - gms-central-park
+    - gms-gandaria
+    - gms-karawaci
+    - gms-alam-sutera
+    - gms-puri
+    - gms-pluit
+    - gms-bsd
+  notes: ""

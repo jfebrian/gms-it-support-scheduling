@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/*
+ * GMS design tokens.
+ * Palette + font stack lifted from gms.church so this tool feels like part of
+ * the GMS family (see brain/knowledge/gms-brand.md for provenance).
+ */
+@theme {
+	/* Primary — GMS royal blue (used for CTAs, nav, active state) */
+	--color-gms-50: #eef3fb;
+	--color-gms-100: #d3e0f3;
+	--color-gms-200: #9fb8cf; /* rgb(165,184,207) — observed light accent */
+	--color-gms-300: #6b8fb8;
+	--color-gms-400: #3668a2;
+	--color-gms-500: #00408c; /* rgb(0,64,140) — GMS brand blue */
+	--color-gms-600: #003373;
+	--color-gms-700: #00285a;
+	--color-gms-800: #001e42;
+	--color-gms-900: #00142b;
+
+	/* Neutrals — matched to gms.church body + muted tones */
+	--color-gms-ink: #383838;    /* rgb(56,56,56)  — primary body text */
+	--color-gms-muted: #9f9d9d;  /* rgb(159,157,157) — secondary text */
+	--color-gms-line: #eaeaea;   /* rgb(234,234,234) — dividers */
+
+	/* Font stack — Gotham first (GMS brand), then system fallbacks. If Gotham
+	 * isn't installed locally, the platform's ui-sans-serif is a close geometric match. */
+	--font-sans:
+		'Gotham', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Base tweaks */
+@layer base {
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	body {
+		color: var(--color-gms-ink);
+		font-family: var(--font-sans);
+	}
+	:focus-visible {
+		outline: 2px solid var(--color-gms-500);
+		outline-offset: 2px;
+	}
+}
+
+/* Reusable button variants */
+@layer components {
+	/* Primary pill CTA — matches gms.church "Lihat Selengkapnya" style */
+	.btn-gms {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		background-color: var(--color-gms-500);
+		color: #fff;
+		font-weight: 500;
+		padding: 0.5rem 1.25rem;
+		transition: background-color 120ms ease;
+	}
+	.btn-gms:hover {
+		background-color: var(--color-gms-600);
+	}
+	/* Secondary — outlined, same pill shape */
+	.btn-gms-outline {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		border: 1px solid var(--color-gms-500);
+		color: var(--color-gms-500);
+		font-weight: 500;
+		padding: 0.5rem 1.25rem;
+		background: #fff;
+		transition: background-color 120ms ease;
+	}
+	.btn-gms-outline:hover {
+		background-color: var(--color-gms-50);
+	}
+}
+
+/*
+ * Print-friendly defaults. The /schedule/[month]/share view targets clean
+ * screenshot / PDF-export output for digital sharing. Components that want
+ * to be hidden when printing can add the `no-print` class.
+ */
+@media print {
+	.no-print {
+		display: none !important;
+	}
+	body {
+		background: white !important;
+	}
+}
