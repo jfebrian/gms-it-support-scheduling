@@ -1,6 +1,11 @@
 import { error, fail, redirect } from '@sveltejs/kit';
 import { loadAppConfig, readYaml, writeYaml } from '$lib/storage';
-import { Church, ChurchesFile } from '$lib/schemas';
+import {
+	Church,
+	ChurchesFile,
+	VolunteersFile,
+	YouTubeChannelsFile
+} from '$lib/schemas';
 import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
@@ -16,7 +21,7 @@ type ChurchFormFail = {
 };
 
 export const actions: Actions = {
-	default: async ({ request, params }) => {
+	update: async ({ request, params }) => {
 		const form = await request.formData();
 		const payload = String(form.get('payload') ?? '');
 		let parsedJson: unknown;
@@ -72,6 +77,64 @@ export const actions: Actions = {
 
 		churches[idx] = result.data;
 		await writeYaml('churches.yaml', ChurchesFile, churches);
+
+		redirect(303, '/churches');
+	},
+
+	/**
+	 * Permanently remove a church from churches.yaml. Because `loadAppConfig`
+	 * cross-validates church refs in volunteers.yaml and youtube_channels.yaml,
+	 * deleting a church without scrubbing those refs would brick the whole app
+	 * on next load. So we also:
+	 *   - clear `homeChurchId` on any volunteer that pointed at this church
+	 *   - drop the id from every volunteer's `assignableChurchIds`
+	 *   - drop the id from every YouTube channel's `servesChurchIds`
+	 *
+	 * Past schedule/event assignments keep their dangling churchId. They're
+	 * historical record and the schedule view tolerates unknown ids (it falls
+	 * back to displaying the id as-is). Forward-looking schedules will be
+	 * regenerated when the admin re-runs Populate.
+	 */
+	delete: async ({ params }) => {
+		const churches = await readYaml('churches.yaml', ChurchesFile);
+		const idx = churches.findIndex((c) => c.id === params.id);
+		if (idx === -1) {
+			return fail(404, {
+				error: `Church '${params.id}' not found`,
+				issues: []
+			} satisfies ChurchFormFail);
+		}
+
+		churches.splice(idx, 1);
+		await writeYaml('churches.yaml', ChurchesFile, churches);
+
+		// Clean up volunteer cross-refs.
+		const volunteers = await readYaml('volunteers.yaml', VolunteersFile);
+		let volunteersChanged = false;
+		for (const v of volunteers) {
+			if (v.homeChurchId === params.id) {
+				v.homeChurchId = null;
+				volunteersChanged = true;
+			}
+			const before = v.assignableChurchIds.length;
+			v.assignableChurchIds = v.assignableChurchIds.filter((cid) => cid !== params.id);
+			if (v.assignableChurchIds.length !== before) volunteersChanged = true;
+		}
+		if (volunteersChanged) {
+			await writeYaml('volunteers.yaml', VolunteersFile, volunteers);
+		}
+
+		// Clean up YouTube channel cross-refs.
+		const channels = await readYaml('youtube_channels.yaml', YouTubeChannelsFile);
+		let channelsChanged = false;
+		for (const ch of channels) {
+			const before = ch.servesChurchIds.length;
+			ch.servesChurchIds = ch.servesChurchIds.filter((cid) => cid !== params.id);
+			if (ch.servesChurchIds.length !== before) channelsChanged = true;
+		}
+		if (channelsChanged) {
+			await writeYaml('youtube_channels.yaml', YouTubeChannelsFile, channels);
+		}
 
 		redirect(303, '/churches');
 	}

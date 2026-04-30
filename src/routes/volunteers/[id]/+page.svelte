@@ -120,7 +120,7 @@
 	</div>
 </section>
 
-<form method="POST" class="max-w-2xl space-y-5">
+<form method="POST" action="?/update" class="max-w-2xl space-y-5">
 	<fieldset class="rounded-lg border border-slate-200 bg-white p-5">
 		<legend class="px-1 text-sm font-semibold text-slate-700">Identitas</legend>
 		<label class="block text-sm">
@@ -286,3 +286,44 @@
 		</button>
 	</div>
 </form>
+
+<!--
+	Danger zone — separate <form> so the Hapus button can't accidentally
+	be triggered by an Enter keypress in the main edit form, and so a
+	failed delete doesn't blow away the in-progress edits above.
+	`onsubmit="return confirm(...)"` is intentionally inline rather than a
+	Svelte handler — it runs *before* the form serializes and short-circuits
+	natively, which composes cleanly with SvelteKit's POST flow.
+-->
+<section class="mt-8 max-w-2xl rounded-lg border border-rose-200 bg-rose-50/40 p-5">
+	<div class="flex flex-wrap items-start justify-between gap-3">
+		<div>
+			<p class="text-sm font-semibold text-rose-700">Hapus volunteer</p>
+			<p class="mt-1 text-xs text-slate-600">
+				Menghapus akan menghilangkan {v.name} dari daftar dan dari semua catatan
+				ketidakhadiran bulanan. Tindakan ini tidak dapat dibatalkan. Untuk hanya
+				menjeda sementara, gunakan tombol <em>Nonaktifkan</em> di atas.
+			</p>
+		</div>
+		<form
+			method="POST"
+			action="?/delete"
+			onsubmit={(e) => {
+				if (
+					!confirm(
+						`Hapus volunteer "${v.name}" secara permanen? Riwayat penjadwalan tetap tersimpan.`
+					)
+				) {
+					e.preventDefault();
+				}
+			}}
+		>
+			<button
+				type="submit"
+				class="rounded-md border border-rose-300 bg-white px-3 py-1.5 text-sm font-medium text-rose-600 hover:bg-rose-100"
+			>
+				Hapus volunteer
+			</button>
+		</form>
+	</div>
+</section>

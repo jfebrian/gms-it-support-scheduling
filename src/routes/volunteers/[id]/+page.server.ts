@@ -1,6 +1,8 @@
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
 import { error, fail, redirect } from '@sveltejs/kit';
-import { loadAppConfig, readYaml, writeYaml } from '$lib/storage';
-import { VolunteersFile } from '$lib/schemas';
+import { DATA_DIR, exists, loadAppConfig, readYaml, writeYaml } from '$lib/storage';
+import { UnavailabilityFile, VolunteersFile } from '$lib/schemas';
 import { parseVolunteerForm } from '$lib/volunteerForm';
 import type { Actions, PageServerLoad } from './$types';
 
@@ -12,7 +14,7 @@ export const load: PageServerLoad = async ({ params }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ request, params }) => {
+	update: async ({ request, params }) => {
 		const form = await request.formData();
 		// Force id from the route — editing identity is not supported here.
 		form.set('id', params.id!);
@@ -64,6 +66,48 @@ export const actions: Actions = {
 		volunteers[idx] = result.volunteer;
 		volunteers.sort((a, b) => a.name.localeCompare(b.name));
 		await writeYaml('volunteers.yaml', VolunteersFile, volunteers);
+
+		redirect(303, '/volunteers');
+	},
+
+	/**
+	 * Permanently remove a volunteer from volunteers.yaml and strip them from
+	 * every monthly unavailability file. Past schedule/event assignments keep
+	 * their dangling volunteerId — those rows are historical record, and the
+	 * cross-ref check in `loadAppConfig` doesn't validate assignment refs, so
+	 * the app keeps loading. The roster table will fall back to showing the
+	 * stale id, which is the correct trail for an admin investigating "who
+	 * was that?" months later.
+	 *
+	 * If the admin only wants to pause someone, the Aktif checkbox / toggle
+	 * is the safer move — this delete is irreversible.
+	 */
+	delete: async ({ params }) => {
+		const volunteers = await readYaml('volunteers.yaml', VolunteersFile);
+		const idx = volunteers.findIndex((v) => v.id === params.id);
+		if (idx === -1) {
+			return fail(404, { error: `Volunteer '${params.id}' not found` });
+		}
+
+		volunteers.splice(idx, 1);
+		await writeYaml('volunteers.yaml', VolunteersFile, volunteers);
+
+		// Best-effort cleanup of unavailability/*.yaml so the matrix and the
+		// saveUnavailability cross-ref check don't trip over a now-unknown id.
+		if (await exists('unavailability')) {
+			const files = (await readdir(join(DATA_DIR, 'unavailability'))).filter((f) =>
+				f.endsWith('.yaml')
+			);
+			for (const f of files) {
+				const rel = `unavailability/${f}`;
+				const file = await readYaml(rel, UnavailabilityFile);
+				const before = file.entries.length;
+				file.entries = file.entries.filter((e) => e.volunteerId !== params.id);
+				if (file.entries.length !== before) {
+					await writeYaml(rel, UnavailabilityFile, file);
+				}
+			}
+		}
 
 		redirect(303, '/volunteers');
 	}

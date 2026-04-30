@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { enhance } from '$app/forms';
+	import { invalidateAll } from '$app/navigation';
 	import {
 		formatMonthLabel,
 		nextMonth,
@@ -355,6 +356,93 @@
 				.filter((e) => e.dates.length > 0)
 		})
 	);
+
+	/**
+	 * Auto-save the unavailability matrix whenever the payload changes. Admins
+	 * kept losing edits by tab-switching with a manual Simpan button, so we
+	 * persist on every change with a small debounce to coalesce rapid clicks.
+	 *
+	 * IMPORTANT — month-change race:
+	 * SvelteKit reuses this page component when only `params.month` changes
+	 * (no remount), so `selectedVolunteerIds` and `rows` keep the *previous*
+	 * month's edits while `data.month` and `data.unavailability` flip to the
+	 * new month. Without guarding, the autosave $effect would observe a
+	 * "changed" payload and POST stale state to the new month's endpoint —
+	 * the server would then drop dates that don't match the new month prefix
+	 * and write `entries: []`, wiping the new month's saved data.
+	 *
+	 * Two defenses below:
+	 *   1. A "loaded month" $effect that re-seeds the editable state from
+	 *      `data.unavailability` whenever `data.month` changes, and resets
+	 *      the save baseline so the autosave $effect treats it as a fresh
+	 *      mount.
+	 *   2. The autosave only fires when the payload's `month` matches
+	 *      `data.month` — belt-and-braces against any ordering quirk where
+	 *      the autosave $effect runs before the reset $effect.
+	 */
+	let lastSavedPayload = $state<string | null>(null);
+	let saveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
+	let saveTimer: ReturnType<typeof setTimeout> | null = null;
+	let loadedMonth = $state<string | null>(null);
+
+	$effect(() => {
+		// Re-seed editable state when the route's month changes. The new
+		// month's data is already in `data.unavailability` (load fn ran).
+		if (loadedMonth !== data.month) {
+			loadedMonth = data.month;
+			selectedVolunteerIds = data.unavailability.entries.map((e) => e.volunteerId);
+			rows = initialRows();
+			lastSavedPayload = null; // re-baseline; next $effect run records it
+			saveStatus = 'idle';
+			if (saveTimer) {
+				clearTimeout(saveTimer);
+				saveTimer = null;
+			}
+		}
+	});
+
+	async function saveUnavailabilityNow(payload: string) {
+		saveStatus = 'saving';
+		try {
+			const fd = new FormData();
+			fd.set('payload', payload);
+			const res = await fetch('?/saveUnavailability', {
+				method: 'POST',
+				body: fd,
+				headers: { 'x-sveltekit-action': 'true' }
+			});
+			if (!res.ok) throw new Error(`HTTP ${res.status}`);
+			lastSavedPayload = payload;
+			saveStatus = 'saved';
+			await invalidateAll();
+		} catch (err) {
+			console.error('autosave failed:', err);
+			saveStatus = 'error';
+		}
+	}
+
+	$effect(() => {
+		const payload = unavailabilityPayload;
+		// Belt-and-braces: never POST a payload whose month doesn't match the
+		// route's current month (see "month-change race" note above).
+		try {
+			const parsed = JSON.parse(payload) as { month?: string };
+			if (parsed.month !== data.month) return;
+		} catch {
+			return;
+		}
+		// First run after mount or after a month-change reset: record the
+		// baseline, do not save (the value matches what's already on disk
+		// because we just loaded it / reseeded from data).
+		if (lastSavedPayload === null) {
+			lastSavedPayload = payload;
+			return;
+		}
+		if (payload === lastSavedPayload) return;
+
+		if (saveTimer) clearTimeout(saveTimer);
+		saveTimer = setTimeout(() => saveUnavailabilityNow(payload), 500);
+	});
 
 	/**
 	 * Per-church CSS custom properties for accent bar, soft header tint, and
@@ -756,12 +844,22 @@
 					</button>
 				</div>
 
-				<button
-					type="submit"
-					class="rounded-full bg-gms-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-gms-600"
-				>
-					Simpan ketidakhadiran
-				</button>
+				<!--
+					Save status indicator. Auto-save handles persistence as the
+					admin checks/unchecks dates; this just gives them feedback so
+					they know it's safe to leave the page.
+				-->
+				<div class="flex items-center gap-2 text-xs">
+					{#if saveStatus === 'saving'}
+						<span class="text-slate-500">Menyimpan…</span>
+					{:else if saveStatus === 'saved'}
+						<span class="text-emerald-600">Tersimpan</span>
+					{:else if saveStatus === 'error'}
+						<span class="text-rose-600">Gagal menyimpan — coba lagi</span>
+					{:else}
+						<span class="text-slate-400">Tersimpan otomatis</span>
+					{/if}
+				</div>
 			</div>
 		{/if}
 	</form>

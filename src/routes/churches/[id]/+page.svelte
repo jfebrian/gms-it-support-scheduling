@@ -148,7 +148,7 @@
 	</div>
 {/if}
 
-<form method="POST" class="space-y-6">
+<form method="POST" action="?/update" class="space-y-6">
 	<input type="hidden" name="payload" value={payload} />
 
 	<fieldset class="rounded-lg border border-slate-200 bg-white p-5">
@@ -470,3 +470,45 @@
 		</button>
 	</div>
 </form>
+
+<!--
+	Danger zone — separate <form> so deletion can't be triggered by an Enter
+	keypress inside the main editor, and so a failed delete doesn't take the
+	in-progress edits above with it. The server action also strips this
+	church from any volunteer's homeChurchId / assignableChurchIds and from
+	YouTube channels' servesChurchIds, otherwise loadAppConfig's cross-ref
+	check would fail on the next page load.
+-->
+<section class="mt-8 rounded-lg border border-rose-200 bg-rose-50/40 p-5">
+	<div class="flex flex-wrap items-start justify-between gap-3">
+		<div>
+			<p class="text-sm font-semibold text-rose-700">Hapus gereja</p>
+			<p class="mt-1 text-xs text-slate-600">
+				Menghapus akan menghilangkan {data.church.name} dari aplikasi dan
+				membersihkan referensinya di profil volunteer dan channel YouTube.
+				Riwayat penjadwalan tetap tersimpan. Tindakan ini tidak dapat
+				dibatalkan.
+			</p>
+		</div>
+		<form
+			method="POST"
+			action="?/delete"
+			onsubmit={(e) => {
+				if (
+					!confirm(
+						`Hapus gereja "${data.church.name}" secara permanen? Referensinya akan dihapus dari profil volunteer.`
+					)
+				) {
+					e.preventDefault();
+				}
+			}}
+		>
+			<button
+				type="submit"
+				class="rounded-md border border-rose-300 bg-white px-3 py-1.5 text-sm font-medium text-rose-600 hover:bg-rose-100"
+			>
+				Hapus gereja
+			</button>
+		</form>
+	</div>
+</section>
